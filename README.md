@@ -24,4 +24,3 @@ binding.xml is necessary to handle an error in the original schema file.  Its co
         </jxb:bindings>              
     </jxb:bindings>          
 
-</jxb:bindings>
