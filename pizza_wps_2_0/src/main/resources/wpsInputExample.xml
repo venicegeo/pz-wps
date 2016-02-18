@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:InputDescriptionType
+	xmlns:wps="http://www.opengis.net/wps/2.0"
+	xmlns:ows="http://www.opengis.net/ows/2.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/wps/2.0 ../wps.xsd">
+				<ows:Title>Geometry to be buffered</ows:Title>
+				<ows:Abstract>Simple Features geometry input in GML or GeoJson</ows:Abstract>
+				<ows:Identifier>INPUT_GEOMETRY</ows:Identifier>
+				<ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process/description/documentation" xlink:href="http://my.wps.server/processes/proximity/Planar-Buffer.html#input_geometry"/>
+				<wps:ComplexData>
+					<wps:Format mimeType="text/xml" encoding="UTF-8" schema="http://schemas.opengis.net/gml/3.2.1/feature.xsd" default="true"/>
+					<wps:Format mimeType="application/json" encoding="UTF-8"/>
+				</wps:ComplexData>
+			</wps:InputDescriptionType>
+	
