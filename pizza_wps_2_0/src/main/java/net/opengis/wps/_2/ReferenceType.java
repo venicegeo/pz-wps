@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 /**
  * 
@@ -58,7 +60,9 @@ import javax.xml.bind.annotation.XmlType;
 public class ReferenceType {
 
     @XmlElement(name = "Body")
+    @JsonProperty("Body")
     protected Object body;
+    @JsonProperty("BodyReference")
     @XmlElement(name = "BodyReference")
     protected ReferenceType.BodyReference bodyReference;
     @XmlAttribute(name = "href", namespace = "http://www.w3.org/1999/xlink", required = true)

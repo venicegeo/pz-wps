@@ -8,9 +8,15 @@
 
 package net.opengis.wps._2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 
 /**
@@ -54,5 +60,29 @@ public enum DataTransmissionModeType {
         }
         throw new IllegalArgumentException(v);
     }
+    
+    private static Map<String, DataTransmissionModeType> dtmTypeByValue = new HashMap<>();
+    private static Map<DataTransmissionModeType, String> valueByDTMType = new HashMap<>();
+    static {
+    	DataTransmissionModeType[] enumConstants = DataTransmissionModeType.class.getEnumConstants();
+        for (DataTransmissionModeType dtmType : enumConstants) {
+            try {
+                String value = DataTransmissionModeType.class.getField(dtmType.name()).getAnnotation(XmlEnumValue.class).value();
+                dtmTypeByValue.put(value, dtmType);
+                valueByDTMType.put(dtmType, value);
+            } catch (NoSuchFieldException e) {
+                throw new IllegalStateException(e);
+            }
+        }
+    }
 
+    @JsonCreator
+    public static DataTransmissionModeType create(String value) {
+        return dtmTypeByValue.get(value);
+    }
+
+    @JsonValue
+    public String getValue() {
+        return valueByDTMType.get(this);
+    }
 }

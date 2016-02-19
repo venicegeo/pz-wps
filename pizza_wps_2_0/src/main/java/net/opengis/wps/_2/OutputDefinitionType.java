@@ -49,7 +49,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class OutputDefinitionType {
 
-    @XmlElement(name = "Output")
+    @XmlElement(name = "output")
     protected OutputDefinitionType output;
     @XmlAttribute(name = "id", required = true)
     @XmlSchemaType(name = "anyURI")
@@ -134,6 +134,7 @@ public class OutputDefinitionType {
      *     
      */
     public void setTransmission(DataTransmissionModeType value) {
+    	if (value != null) System.out.println("Output definition " + value.value());
         this.transmission = value;
     }
 

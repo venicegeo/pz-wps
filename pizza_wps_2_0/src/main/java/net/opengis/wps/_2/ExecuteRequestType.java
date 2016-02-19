@@ -10,11 +10,16 @@ package net.opengis.wps._2;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import net.opengis.ows._2.CodeType;
 
 
@@ -68,14 +73,18 @@ import net.opengis.ows._2.CodeType;
     "input",
     "output"
 })
+@XmlRootElement(name = "Execute")
 public class ExecuteRequestType
     extends RequestBaseType
 {
 
     @XmlElement(name = "Identifier", namespace = "http://www.opengis.net/ows/2.0", required = true)
+    @JsonProperty("Identifier")
     protected CodeType identifier;
+    @JsonProperty("Input")
     @XmlElement(name = "Input")
     protected List<DataInputType> input;
+    @JsonProperty("Output")
     @XmlElement(name = "Output", required = true)
     protected List<OutputDefinitionType> output;
     @XmlAttribute(name = "mode", required = true)

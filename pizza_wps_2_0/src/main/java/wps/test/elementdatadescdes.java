@@ -7,6 +7,7 @@ import javax.xml.namespace.QName;
 
 import net.opengis.ows._2.MetadataType;
 import net.opengis.wps._2.ComplexDataType;
+import net.opengis.wps._2.ExecuteRequestType;
 import net.opengis.wps._2.LiteralDataType;
 
 import com.fasterxml.jackson.core.JsonParser;
@@ -41,6 +42,10 @@ public class elementdatadescdes extends JsonDeserializer<JAXBElement>{
 	    else if (declaredType.contains("LiteralDataType")) {
 	    	LiteralDataType ldt = mapper.readValue(newp, LiteralDataType.class);
 	    	retVal = new JAXBElement<LiteralDataType>(new QName("http://www.opengis.net/wps/2.0","LiteralData"), LiteralDataType.class, ldt);
+	    }
+	    else if (declaredType.contains("ExecuteRequestType")) {
+	    	ExecuteRequestType edt = mapper.readValue(newp, ExecuteRequestType.class);
+	    	retVal = new JAXBElement<ExecuteRequestType>(new QName("http://www.opengis.net/wps/2.0","LiteralData"), ExecuteRequestType.class, edt);
 	    }
 	    
 	    else {
