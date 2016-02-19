@@ -1,0 +1,266 @@
+{
+  "ProcessOffering" : [ {
+    "Process" : {
+      "Input" : [ {
+        "DataDescription" : {
+          "name" : "{http://www.opengis.net/wps/2.0}ComplexData",
+          "declaredType" : "net.opengis.wps._2.ComplexDataType",
+          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+          "value" : {
+            "any" : [ {
+              "mimeType" : "text/xml",
+              "encoding" : "UTF-8",
+              "schema" : "http://schemas.opengis.net/gml/3.2.1/feature.xsd",
+              "maximumMegabytes" : null,
+              "default" : true
+            }, {
+              "mimeType" : "application/json",
+              "encoding" : "UTF-8",
+              "schema" : null,
+              "maximumMegabytes" : null,
+              "default" : null
+            } ],
+            "format" : null
+          },
+          "nil" : false,
+          "globalScope" : true,
+          "typeSubstituted" : false
+        },
+        "Input" : null,
+        "Title" : [ {
+          "value" : "Geometry to be buffered",
+          "lang" : null
+        } ],
+        "Abstract" : [ {
+          "value" : "Simple Features geometry input in GML or GeoJson",
+          "lang" : null
+        } ],
+        "Keywords" : null,
+        "Identifier" : {
+          "value" : "INPUT_GEOMETRY",
+          "codeSpace" : null
+        },
+        "Metadata" : [ {
+          "name" : "{http://www.opengis.net/ows/2.0}Metadata",
+          "declaredType" : "net.opengis.ows._2.MetadataType",
+          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+          "value" : {
+            "abstractMetaData" : null,
+            "about" : null,
+            "type" : null,
+            "href" : "http://my.wps.server/processes/proximity/Planar-Buffer.html#input_geometry",
+            "role" : "http://www.opengis.net/spec/wps/2.0/def/process/description/documentation",
+            "arcrole" : null,
+            "title" : null,
+            "show" : null,
+            "actuate" : null
+          },
+          "nil" : false,
+          "globalScope" : true,
+          "typeSubstituted" : false
+        } ],
+        "minOccurs" : null,
+        "maxOccurs" : null
+      }, {
+        "DataDescription" : {
+          "name" : "{http://www.opengis.net/wps/2.0}LiteralData",
+          "declaredType" : "net.opengis.wps._2.LiteralDataType",
+          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+          "value" : {
+            "literalDataDomain" : null,
+            "format" : null
+          },
+          "nil" : false,
+          "globalScope" : true,
+          "typeSubstituted" : false
+        },
+        "Input" : null,
+        "Title" : [ {
+          "value" : "Distance",
+          "lang" : null
+        } ],
+        "Abstract" : [ {
+          "value" : "Distance to be used to calculate buffer.",
+          "lang" : null
+        } ],
+        "Keywords" : null,
+        "Identifier" : {
+          "value" : "DISTANCE",
+          "codeSpace" : null
+        },
+        "Metadata" : [ {
+          "name" : "{http://www.opengis.net/ows/2.0}Metadata",
+          "declaredType" : "net.opengis.ows._2.MetadataType",
+          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+          "value" : {
+            "abstractMetaData" : null,
+            "about" : null,
+            "type" : null,
+            "href" : "http://my.wps.server/processes/proximity/Planar-Buffer.html#distance",
+            "role" : "http://www.opengis.net/spec/wps/2.0/def/process/description/documentation",
+            "arcrole" : null,
+            "title" : null,
+            "show" : null,
+            "actuate" : null
+          },
+          "nil" : false,
+          "globalScope" : true,
+          "typeSubstituted" : false
+        } ],
+        "minOccurs" : 0,
+        "maxOccurs" : null
+      } ],
+      "Output" : [ {
+        "DataDescription" : {
+          "name" : "{http://www.opengis.net/wps/2.0}ComplexData",
+          "declaredType" : "net.opengis.wps._2.ComplexDataType",
+          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+          "value" : {
+            "any" : [ {
+              "mimeType" : "text/xml",
+              "encoding" : "UTF-8",
+              "schema" : "http://schemas.opengis.net/gml/3.2.1/feature.xsd",
+              "maximumMegabytes" : null,
+              "default" : true
+            }, {
+              "mimeType" : "application/json",
+              "encoding" : "UTF-8",
+              "schema" : null,
+              "maximumMegabytes" : null,
+              "default" : null
+            } ],
+            "format" : null
+          },
+          "nil" : false,
+          "globalScope" : true,
+          "typeSubstituted" : false
+        },
+        "Output" : null,
+        "Title" : [ {
+          "value" : "Buffered Geometry",
+          "lang" : null
+        } ],
+        "Abstract" : [ {
+          "value" : "Output Geometry in GML or GeoJson",
+          "lang" : null
+        } ],
+        "Keywords" : null,
+        "Identifier" : {
+          "value" : "BUFFERED_GEOMETRY",
+          "codeSpace" : null
+        },
+        "Metadata" : [ {
+          "name" : "{http://www.opengis.net/ows/2.0}Metadata",
+          "declaredType" : "net.opengis.ows._2.MetadataType",
+          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+          "value" : {
+            "abstractMetaData" : null,
+            "about" : null,
+            "type" : null,
+            "href" : "http://my.wps.server/processes/proximity/Planar-Buffer.html#buffered_geometry",
+            "role" : "http://www.opengis.net/spec/wps/2.0/def/process/description/documentation",
+            "arcrole" : null,
+            "title" : null,
+            "show" : null,
+            "actuate" : null
+          },
+          "nil" : false,
+          "globalScope" : true,
+          "typeSubstituted" : false
+        } ]
+      } ],
+      "Title" : [ {
+        "value" : "Planar Buffer operation for Simple Features",
+        "lang" : null
+      } ],
+      "Abstract" : [ {
+        "value" : "Create a buffer around Simple Feature geometries. Accepts any valid simple features input in GML or GeoJson and computes their joint buffer geometry.",
+        "lang" : null
+      } ],
+      "Keywords" : null,
+      "Identifier" : {
+        "value" : "http://my.wps.server/processes/proximity/Planar-Buffer",
+        "codeSpace" : null
+      },
+      "Metadata" : [ {
+        "name" : "{http://www.opengis.net/ows/2.0}Metadata",
+        "declaredType" : "net.opengis.ows._2.MetadataType",
+        "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+        "value" : {
+          "abstractMetaData" : null,
+          "about" : null,
+          "type" : null,
+          "href" : "http://some.host/profileregistry/concept/buffer",
+          "role" : "http://www.opengis.net/spec/wps/2.0/def/process-profile/concept",
+          "arcrole" : null,
+          "title" : null,
+          "show" : null,
+          "actuate" : null
+        },
+        "nil" : false,
+        "globalScope" : true,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.opengis.net/ows/2.0}Metadata",
+        "declaredType" : "net.opengis.ows._2.MetadataType",
+        "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+        "value" : {
+          "abstractMetaData" : null,
+          "about" : null,
+          "type" : null,
+          "href" : "http://some.host/profileregistry/concept/planarbuffer",
+          "role" : "http://www.opengis.net/spec/wps/2.0/def/process-profile/concept",
+          "arcrole" : null,
+          "title" : null,
+          "show" : null,
+          "actuate" : null
+        },
+        "nil" : false,
+        "globalScope" : true,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.opengis.net/ows/2.0}Metadata",
+        "declaredType" : "net.opengis.ows._2.MetadataType",
+        "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+        "value" : {
+          "abstractMetaData" : null,
+          "about" : null,
+          "type" : null,
+          "href" : "http://some.host/profileregistry/generic/SF-Buffer",
+          "role" : "http://www.opengis.net/spec/wps/2.0/def/process-profile/generic",
+          "arcrole" : null,
+          "title" : null,
+          "show" : null,
+          "actuate" : null
+        },
+        "nil" : false,
+        "globalScope" : true,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.opengis.net/ows/2.0}Metadata",
+        "declaredType" : "net.opengis.ows._2.MetadataType",
+        "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+        "value" : {
+          "abstractMetaData" : null,
+          "about" : null,
+          "type" : null,
+          "href" : "http://some.host/profileregistry/implementation/Planar-GML-Buffer.html",
+          "role" : "http://www.opengis.net/spec/wps/2.0/def/process/description/documentation",
+          "arcrole" : null,
+          "title" : null,
+          "show" : null,
+          "actuate" : null
+        },
+        "nil" : false,
+        "globalScope" : true,
+        "typeSubstituted" : false
+      } ],
+      "lang" : null
+    },
+    "any" : null,
+    "jobControlOptions" : [ "sync-execute", "async-execute", "dismiss" ],
+    "outputTransmission" : [ "value", "reference" ],
+    "processVersion" : null,
+    "processModel" : null
+  } ]
+}
