@@ -50,7 +50,6 @@ public class WPSExecuteInputsTest {
 		    mapper.registerModule(module);
 		    JAXBElement ert = mapper.readValue(wpspoString, JAXBElement.class);
 
-		    System.out.println(wpspoString);
 		} catch (JAXBException e) {;
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -134,7 +134,6 @@ public class OutputDefinitionType {
      *     
      */
     public void setTransmission(DataTransmissionModeType value) {
-    	if (value != null) System.out.println("Output definition " + value.value());
         this.transmission = value;
     }
 
