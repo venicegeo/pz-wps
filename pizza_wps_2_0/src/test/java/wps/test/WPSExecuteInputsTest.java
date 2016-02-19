@@ -10,12 +10,11 @@ import javax.xml.bind.Unmarshaller;
 
 import net.opengis.wps._2.ObjectFactory;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector;
 
@@ -23,6 +22,7 @@ public class WPSExecuteInputsTest {
 	public static void main(String[] args) {
 		JAXBContext jaxbContext;
 		ObjectMapper mapper = new ObjectMapper();
+		mapper.setSerializationInclusion(Include.NON_NULL);
 		
 		ObjectFactory factory = new ObjectFactory();
 		
