@@ -10,12 +10,15 @@ package net.opengis.wps._2;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 /**
@@ -61,6 +64,7 @@ import javax.xml.bind.annotation.XmlType;
 public abstract class RequestBaseType {
 
     @XmlElement(name = "Extension")
+    @JsonProperty("Extension")
     protected List<Object> extension;
     @XmlAttribute(name = "service", required = true)
     protected String service;

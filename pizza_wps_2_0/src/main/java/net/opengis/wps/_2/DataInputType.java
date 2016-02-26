@@ -10,12 +10,16 @@ package net.opengis.wps._2;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 /**
@@ -52,16 +56,20 @@ import javax.xml.bind.annotation.XmlType;
     "reference",
     "input"
 })
+@XmlRootElement
 public class DataInputType {
 
     @XmlElement(name = "Data")
+    @JsonProperty("Data")
     protected Data data;
     @XmlElement(name = "Reference")
+    @JsonProperty("Reference")
     protected ReferenceType reference;
     @XmlElement(name = "Input")
+    @JsonProperty("Input")
     protected List<DataInputType> input;
     @XmlAttribute(name = "id", required = true)
-    @XmlSchemaType(name = "anyURI")
+    @XmlSchemaType(name = "AnyURI")
     protected String id;
 
     /**

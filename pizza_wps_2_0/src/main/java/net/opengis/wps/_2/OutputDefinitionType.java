@@ -49,7 +49,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class OutputDefinitionType {
 
-    @XmlElement(name = "Output")
+    @XmlElement(name = "output")
     protected OutputDefinitionType output;
     @XmlAttribute(name = "id", required = true)
     @XmlSchemaType(name = "anyURI")

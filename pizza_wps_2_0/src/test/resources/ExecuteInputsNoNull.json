@@ -1,0 +1,33 @@
+{
+  "name" : "{http://www.opengis.net/wps/2.0}Execute",
+  "declaredType" : "net.opengis.wps._2.ExecuteRequestType",
+  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+  "value" : {
+    "Identifier" : {
+      "value" : "\nhttp://my.wps.server/processes/proximity/Planar-Buffer\n"
+    },
+    "Input" : [ {
+      "Reference" : {
+        "href" : "http://some.data.server/mygmldata.xml"
+      },
+      "id" : "INPUT_GEOMETRY"
+    }, {
+      "Data" : {
+        "content" : [ "10" ],
+        "otherAttributes" : { }
+      },
+      "id" : "DISTANCE"
+    } ],
+    "Output" : [ {
+      "id" : "BUFFERED_GEOMETRY",
+      "transmission" : "reference"
+    } ],
+    "service" : "WPS",
+    "version" : "2.0.0",
+    "mode" : "async",
+    "response" : "document"
+  },
+  "nil" : false,
+  "globalScope" : true,
+  "typeSubstituted" : false
+}

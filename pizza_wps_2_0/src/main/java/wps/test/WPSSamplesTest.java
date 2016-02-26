@@ -11,6 +11,7 @@ import javax.xml.bind.Unmarshaller;
 import net.opengis.wps._2.ObjectFactory;
 import net.opengis.wps._2.ProcessOfferings;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
@@ -31,6 +32,7 @@ public class WPSSamplesTest {
 	    JAXBContext jaxbContext;
 		try {
 			ObjectMapper mapper = new ObjectMapper();
+			mapper.setSerializationInclusion(Include.NON_NULL);
 			
 			ObjectFactory factory = new ObjectFactory();
 			/*InputDescriptionType idt = factory.createInputDescriptionType();
